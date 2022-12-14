@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autodemo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="53.0" prefWidth="1360.0">
+         <children>
+            <MenuButton fx:id="yearButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Year">
+              <items>
+                <MenuItem fx:id="ten" mnemonicParsing="false" text="2010" />
+                <MenuItem fx:id="eleven" mnemonicParsing="false" text="2011" />
+                  <MenuItem fx:id="twelve" mnemonicParsing="false" text="2012" />
+                  <MenuItem fx:id="thirteen" mnemonicParsing="false" text="2013" />
+              </items>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton fx:id="makeButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Make">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Ford" />
+                <MenuItem mnemonicParsing="false" text="Honda" />
+                  <MenuItem mnemonicParsing="false" text="Mazda" />
+              </items>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton fx:id="modelButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Model">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Accord" />
+                <MenuItem mnemonicParsing="false" text="Civic" />
+                  <MenuItem mnemonicParsing="false" text="Mazda 3" />
+              </items>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+               <HBox.margin>
+                  <Insets right="400.0" />
+               </HBox.margin>
+            </MenuButton>
+            <TextArea editable="false" promptText="Search" wrapText="true" />
+         </children></HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="615.0" prefWidth="1360.0">
+         <children>
+            <VBox prefHeight="615.0" prefWidth="303.0">
+               <children>
+                  <Label text="MAP" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Hyperlink text="Autopart Stores" />
+                        <Hyperlink text="Dealerships" />
+                        <Hyperlink text="Gas Stations" />
+                        <Hyperlink text="Mechanic Shops" />
+                        <Hyperlink text="Tire Shops" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox prefHeight="615.0" prefWidth="655.0">
+               <children>
+                  <Label text="QUICK LOOKUP" />
+                  <VBox prefHeight="196.0" prefWidth="530.0">
+                     <children>
+                        <Hyperlink text="Battery" />
+                        <Hyperlink text="Oil Filter" />
+                        <Hyperlink text="Wiper Blades" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox prefHeight="615.0" prefWidth="402.0">
+               <children>
+                  <Label text="DIY" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Hyperlink text="Antifreeze/Coolant Type/Capacity" />
+                        <Hyperlink text="Engine Oil Type/Capacity" />
+                        <Hyperlink text="Spark Plug Gap" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
