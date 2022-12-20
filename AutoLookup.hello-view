@@ -11,12 +11,12 @@
    <children>
       <HBox prefHeight="53.0" prefWidth="1360.0">
          <children>
-            <MenuButton fx:id="yearButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Year">
+            <MenuButton fx:id="Year" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Year">
               <items>
-                <MenuItem fx:id="ten" mnemonicParsing="false" text="2010" />
-                <MenuItem fx:id="eleven" mnemonicParsing="false" text="2011" />
-                  <MenuItem fx:id="twelve" mnemonicParsing="false" text="2012" />
-                  <MenuItem fx:id="thirteen" mnemonicParsing="false" text="2013" />
+                <MenuItem fx:id="ten" mnemonicParsing="false" onAction="#year2010" text="2010" />
+                <MenuItem fx:id="eleven" mnemonicParsing="false" onAction="#year2011" text="2011" />
+                  <MenuItem fx:id="twelve" mnemonicParsing="false" onAction="#year2012" text="2012" />
+                  <MenuItem fx:id="thirteen" mnemonicParsing="false" onAction="#year2013" text="2013" />
               </items>
                <HBox.margin>
                   <Insets right="10.0" />
@@ -24,9 +24,9 @@
             </MenuButton>
             <MenuButton fx:id="makeButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Make">
               <items>
-                <MenuItem mnemonicParsing="false" text="Ford" />
-                <MenuItem mnemonicParsing="false" text="Honda" />
-                  <MenuItem mnemonicParsing="false" text="Mazda" />
+                <MenuItem fx:id="Ford" mnemonicParsing="false" onAction="#makeFord" text="Ford" />
+                <MenuItem fx:id="Honda" mnemonicParsing="false" onAction="#makeHonda" text="Honda" />
+                  <MenuItem fx:id="Mazda" mnemonicParsing="false" onAction="#makeMazda" text="Mazda" />
               </items>
                <HBox.margin>
                   <Insets right="10.0" />
@@ -34,22 +34,29 @@
             </MenuButton>
             <MenuButton fx:id="modelButton" maxWidth="300.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" text="Model">
               <items>
-                <MenuItem mnemonicParsing="false" text="Accord" />
-                <MenuItem mnemonicParsing="false" text="Civic" />
-                  <MenuItem mnemonicParsing="false" text="Mazda 3" />
+                <MenuItem fx:id="Accord" mnemonicParsing="false" onAction="#Accord" text="Accord" />
+                <MenuItem fx:id="Civic" mnemonicParsing="false" onAction="#Civic" text="Civic" />
+                  <MenuItem fx:id="Mazda3" mnemonicParsing="false" onAction="#Mazda3" text="Mazda 3" />
+                  <MenuItem fx:id="F150" mnemonicParsing="false" onAction="#F150" text="F-150" />
               </items>
-               <contextMenu>
-                  <ContextMenu>
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
                <HBox.margin>
-                  <Insets right="400.0" />
+                  <Insets right="10.0" />
                </HBox.margin>
             </MenuButton>
-            <TextArea editable="false" promptText="Search" wrapText="true" />
+            <Button fx:id="reset" mnemonicParsing="false" onAction="#resetLookup" prefHeight="35.0" prefWidth="154.0" text="Reset Lookup">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <TextArea fx:id="searchBar" editable="false" prefHeight="39.0" prefWidth="402.0" promptText="Search" wrapText="true">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></TextArea>
+            <Button fx:id="homeButton" mnemonicParsing="false" onMouseClicked="#setHome" prefHeight="35.0" prefWidth="130.0" text="Home">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
          </children></HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="615.0" prefWidth="1360.0">
          <children>
@@ -71,11 +78,10 @@
                   <Label text="QUICK LOOKUP" />
                   <VBox prefHeight="196.0" prefWidth="530.0">
                      <children>
-                        <Hyperlink text="Battery" />
-                        <Hyperlink text="Oil Filter" />
-                        <Hyperlink text="Wiper Blades" />
-                     </children>
-                  </VBox>
+                        <Button fx:id="batteryButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onMouseClicked="#Battery" prefHeight="50.0" prefWidth="100.0" text="Battery" wrapText="true" />
+                        <Button fx:id="oilFilterButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Oil Filter" />
+                        <Button fx:id="wiperBladeButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" text="Wiper Blades" />
+                     </children></VBox>
                </children></VBox>
             <VBox prefHeight="615.0" prefWidth="402.0">
                <children>
