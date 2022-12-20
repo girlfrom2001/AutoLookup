@@ -1,0 +1,178 @@
+package com.example.autodemo;
+
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class BatteryController {
+    @FXML
+    private Button home;
+    @FXML
+    private MenuButton Year;
+    @FXML
+    private MenuButton makeButton;
+    @FXML
+    private MenuButton modelButton;
+    @FXML
+    private Button reset;
+    @FXML
+    private TextArea searchBar;
+    @FXML
+    private MenuItem ten;
+    @FXML
+    private MenuItem eleven;
+    @FXML
+    private MenuItem twelve;
+    @FXML
+    private MenuItem thirteen;
+    @FXML
+    private MenuItem Ford;
+    @FXML
+    private MenuItem Honda;
+    @FXML
+    private MenuItem Mazda;
+    @FXML
+    private MenuItem Accord;
+    @FXML
+    private MenuItem Civic;
+    @FXML
+    private MenuItem Mazda3;
+    @FXML
+    private MenuItem F150;
+    @FXML
+    private Button batteryButton;
+    @FXML
+    private Button oilFilterButton;
+    @FXML
+    private Button wiperBladeButton;
+
+
+    @FXML
+    private void initialize() {
+
+        if (Year.isDisable() == false) {
+            makeButton.setDisable(true);
+        }
+        if (makeButton.isDisable() == true) {
+            modelButton.setDisable(true);
+        }
+    }
+
+    @FXML
+    private void resetLookup() {
+        searchBar.setText("");
+        makeButton.setDisable(true);
+        modelButton.setDisable(true);
+        Year.setText(Year.getId());
+        makeButton.setText("Make");
+        modelButton.setText("Model");
+        if (Year.isDisable() == false) {
+            makeButton.setDisable(true);
+        }
+        if (makeButton.isDisable() == true) {
+            modelButton.setDisable(true);
+        }
+    }
+
+
+
+    @FXML
+    private void setHome(MouseEvent event) throws IOException {
+        Stage stage = (Stage) home.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage.setTitle("Auto Home");
+        Scene scene1 = new Scene(root);
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void Battery(MouseEvent event) throws IOException {
+        Stage stage = (Stage) batteryButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Battery-view.fxml"));
+        stage.setTitle("Battery LookUp");
+        Scene scene1 = new Scene(root);
+        stage.setScene(scene1);
+        stage.show();
+    }
+
+    @FXML
+    private void year2010() {
+        Year.setText("2010");
+        makeButton.setDisable(false);
+    }
+
+    @FXML
+    private void year2011() {
+        Year.setText("2011");
+        makeButton.setDisable(false);
+    }
+
+    @FXML
+    private void year2012() {
+        Year.setText("2012");
+        makeButton.setDisable(false);
+    }
+
+    @FXML
+    private void year2013() {
+        Year.setText("2013");
+        makeButton.setDisable(false);
+    }
+
+    @FXML
+    private void makeFord() {
+        makeButton.setText(Ford.getId());
+        modelButton.setDisable(false);
+        Accord.setVisible(false);
+        Civic.setVisible(false);
+        Mazda3.setVisible(false);
+    }
+
+    @FXML
+    private void makeHonda() {
+        makeButton.setText(Honda.getId());
+        modelButton.setDisable(false);
+        Mazda3.setVisible(false);
+        F150.setVisible(false);
+    }
+
+    @FXML
+    private void makeMazda() {
+        makeButton.setText(Mazda.getId());
+        modelButton.setDisable(false);
+        Accord.setVisible(false);
+        Civic.setVisible(false);
+        F150.setVisible(false);
+
+    }
+
+    @FXML
+    private void Mazda3() {
+        modelButton.setText("Mazda 3");
+    }
+
+    @FXML
+    private void Civic() {
+        modelButton.setText("Civic");
+    }
+
+    @FXML
+    private void Accord() {
+        modelButton.setText("Accord");
+    }
+
+    @FXML
+    private void F150() {
+        modelButton.setText("F-150");
+    }
+}
