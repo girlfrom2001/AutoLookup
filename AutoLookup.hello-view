@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autodemo.HelloController">
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1000.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autodemo.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -48,11 +48,11 @@
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-            <TextArea fx:id="searchBar" editable="false" prefHeight="39.0" prefWidth="402.0" promptText="Search" wrapText="true">
+            <TextArea fx:id="searchBar" editable="false" prefHeight="53.0" prefWidth="250.0" promptText="Search" wrapText="true">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin></TextArea>
-            <Button fx:id="homeButton" mnemonicParsing="false" onMouseClicked="#setHome" prefHeight="35.0" prefWidth="130.0" text="Home">
+            <Button fx:id="home" mnemonicParsing="false" onMouseClicked="#setHome" prefHeight="35.0" prefWidth="130.0" text="Home">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
