@@ -2,19 +2,43 @@ package com.example.autodemo;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setTitle("Auto LookUp");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1400, 800);
-        stage.setTitle("Auto LookUp");
-        stage.setScene(scene);
-        stage.show();
+        Scene scene1 = new Scene(fxmlLoader.load(), 1400, 800);
+
+
+//        Group group1 = new Group();
+//        Scene scene1 = new Scene(group1, 1400, 800);
+//
+//        Group group2 = new Group();
+//        Scene scene2 = new Scene(group2, 1400, 800);
+//
+//        Button btn = new Button();
+//        btn.setLayoutX(300);
+//        btn.setLayoutY(100);
+//        btn.setText("Battery");
+//        btn.setOnAction(e -> primaryStage.setScene(scene2));
+//        group1.getChildren().add(btn);
+//
+//        Button btn2 = new Button();
+//        btn2.setLayoutX(10);
+//        btn2.setLayoutY(10);
+//        btn2.setText("Home");
+//        btn2.setOnAction( e -> primaryStage.setScene(scene1));
+//        group2.getChildren().add(btn2);
+
+        primaryStage.setScene(scene1);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
